@@ -40,3 +40,19 @@ var isHappy = function(n) {
 };
 // 這個寫法在測資裡，勝過了97%的人，有趣的是， 
 // 把n轉成數字再比較，可以多勝過約35%的人
+//最後，寫一段驗證，一萬以內的數字都會通過驗證，數學上的證明目前無法提供
+var isHappy = function() {
+    var list = [];
+
+    function test(n) {
+        while (n > 4)
+            n = Number(n.toString().split('').reduce((acc, cur) => acc + (cur * cur), 0))
+        return n;
+    }
+
+    for (var i = 1; i < 10000; i++) {
+        list.push(test(i));
+    }
+    var result = list.every(num => num < 5);
+    console.log(result);
+};
