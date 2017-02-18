@@ -32,7 +32,7 @@ var isHappy = function(n) {
 
 //所以我找了一個滿特別的演算法，並以javascript實作
 var isHappy = function(n) {
-    while (n > 6) 
+    while (n > 4) 
         n = Number(n.toString().split('').reduce((acc, cur) => acc + (cur * cur), 0))
     return n === 1;
 };
