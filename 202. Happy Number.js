@@ -30,7 +30,9 @@ var isHappy = function(n) {
 };
 //這個寫法測資勝過36%的人，算是比較弱一點的，
 
-//所以我找了一個滿特別的演算法，並以javascript實作
+//觀察一件事，所有大於1的數，最後都可以落在4
+//(2和3 再往下拆也可以落在4)
+//這個解的空間復雜度是O(1)
 var isHappy = function(n) {
     while (n > 4) 
         n = Number(n.toString().split('').reduce((acc, cur) => acc + (cur * cur), 0))
