@@ -35,7 +35,7 @@ function countPrimes(n) {
     //先把 2 算進來了
     var count = 1;
     var sqrt_n = Math.sqrt(n);
-    //核心思考:如果一個數n 不是任何一個小於n的質數的倍數，那它就是質數
+    //核心思考:如果一個數n 不是任何一個小於sqrt(n)的質數的倍數，那它就是質數
     //check odd number only，cuz even number 100% not a  prime number
     for (var i = 3; i < n; i += 2) {
     	//
