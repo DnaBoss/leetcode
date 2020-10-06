@@ -22,3 +22,13 @@ var removeElement = function(nums, val) {
     }
     return nums.length;
 };
+
+簡單的改寫，提升效能
+從 faster then 43% 提升到 faster then 70%
+var removeElement = function(nums, val) {
+    let index = 0
+    while ( index < nums.length) {
+        nums[index] == val ?nums.splice(index, 1)&&index--:index++
+    }
+    return nums.length;
+};
