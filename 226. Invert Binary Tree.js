@@ -6,6 +6,8 @@
  *     this.right = (right===undefined ? null : right)
  * }
  */
+題意，反轉一顆二元樹
+思路 : 建一個temp 的 node 來記錄左或右子節點，swap，每一個左子、右子節點照做，回傳root，收工
 /**
  * @param {TreeNode} root
  * @return {TreeNode}
