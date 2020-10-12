@@ -1,3 +1,8 @@
+題目:Given a singly linked list, determine if it is a palindrome.
+題意:判斷一個鏈結串列是不是回文
+思路:把所有值存在陣列，頭尾檢查是否相等，記憶中做過字串和陣列的回文判斷題，
+所以解起來算簡單，而且測資成績比我想像的好
+
 class ListNode {
     constructor(val, next) {
         this.val = (val === undefined ? 0 : val)
