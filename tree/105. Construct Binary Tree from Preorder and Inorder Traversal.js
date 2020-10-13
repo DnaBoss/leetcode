@@ -14,14 +14,14 @@ class TreeNode {
         this.right = (right === undefined ? null : right)
     }
 }
-
+/**
 題意: 對一個樹做 preorder 及 inorder 的巡訪，各產生一個數字陣列
 以此二個陣列還原這顆樹
 
 思路:preorder 的第一個數字是 root
 inorder 的 root陣列中，左邊的數字構成 root的左子樹，右邊的數字構成右子樹
 用 preorder inorder 和一些邊界值做輔助 迭代出原本的樹
-/**
+
  *
  *
  * @param {Array<Number>} preorder
