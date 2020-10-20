@@ -1,4 +1,8 @@
 /**
+ * 題意:給定一個根節點，判斷是否為二元樹
+ * 思路1:一開始的思路是 每一個節點的左子節點都小於它，右子節點都大於它
+ * 然後測到一個 右子樹放一個小於root的val的測資就過fail了
+ * 思路2:用中序把每一個點的值都存在array，只要每一個 array[index] 都小於 array[index+1] 就是二元樹了
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
  *     this.val = (val===undefined ? 0 : val)
@@ -6,10 +10,9 @@
  *     this.right = (right===undefined ? null : right)
  * }
  */
-題意:給定一個根節點，判斷是否為二元樹
 
-一開始的思路是 每一個節點的左子節點都小於它，右子節點都大於它
-然後測到一個 右子樹放一個小於root的val的測資就過fail了
+
+
 var isValidBST = function(root) {
         if (root == null) {
         return true;
@@ -39,7 +42,7 @@ var isValidBST = function(root) {
     }
 };
 
-思路2:用中序把每一個點的值都存在array，只要每一個 array[index] 都小於 array[index+1] 就是二元樹了
+
 
 /**
  * @param {TreeNode} root
