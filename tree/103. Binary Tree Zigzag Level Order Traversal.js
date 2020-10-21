@@ -63,3 +63,6 @@ root.left = left;
 
 let ans = zigzagLevelOrder(root)
 console.log('ans = ', ans)
+
+// Runtime: 80 ms, faster than 63.39% of JavaScript online submissions for Binary Tree Zigzag Level Order Traversal.
+// Memory Usage: 40.3 MB, less than 6.49% of JavaScript online submissions for Binary Tree Zigzag Level Order Traversal.
