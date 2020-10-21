@@ -1,4 +1,7 @@
 /**
+ * 題目:Given a binary search tree, write a function kthSmallest to find the kth smallest element in it.
+ * 題意:找出第k小的的數字
+ * 思路，歷遍所有節點，把所有數字存在陣列，排序，回傳 陣列[k-1]即可
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
  *     this.val = (val===undefined ? 0 : val)
@@ -16,16 +19,16 @@ var kthSmallest = function (root, k) {
         return;
     }
     let store = []
-    traval(root, store);
+    travel(root, store);
     store.sort((a, b) => a - b);
     return store[k - 1]
 };
-function traval(node, store) {
+function travel(node, store) {
     store.push(node.val);
     if (node.left) {
-        traval(node.left, store);
+        travel(node.left, store);
     }
     if (node.right) {
-        traval(node.right, store);
+        travel(node.right, store);
     }
 }
