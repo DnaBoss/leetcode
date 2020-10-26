@@ -17,7 +17,7 @@
 var inorderTraversal = function (root) {
     let store = [];
     if (root) {
-        inOreder(root, store);
+        inOrder(root, store);
     }
     return store
 };
@@ -27,13 +27,13 @@ var inorderTraversal = function (root) {
  * @param {TreeNode} node
  * @param {number[]} store
  */
-function inOreder(node, store) {
+function inOrder(node, store) {
     if (node.left) {
-        inOreder(node.left, store);
+        inOrder(node.left, store);
     }
     store.push(node.val);
     if (node.right) {
-        inOreder(node.right, store);
+        inOrder(node.right, store);
     }
 }
 class TreeNode {

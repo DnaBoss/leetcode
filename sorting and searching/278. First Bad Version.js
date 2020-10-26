@@ -10,7 +10,7 @@
  * which returns whether version is bad. 
  * Implement a function to find the first bad version. 
  * You should minimize the number of calls to the AP
- * 題意:題目會給一個fucntion isBadVersion 用來測試版本是否正常，以及一個數字n
+ * 題意:題目會給一個function isBadVersion 用來測試版本是否正常，以及一個數字n
  * 在1~n 之間有某個版本壞了，設為x版，x版之後的每一個版本也都會是壞的
  * 找出x
  * 思路:2分法，基本上全部的code 都沒問題，但測資卡了超級久
