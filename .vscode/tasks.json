@@ -1,22 +1,44 @@
 {
 	"version": "2.0.0",
 	"tasks": [
-	  {
-		"label": "Build with Clang",
-		"type": "shell",
-		"command": "clang++",
-		"args": [
-		  "-std=c++17",
-		  "-stdlib=libc++",
-		  "test.cpp",
-		  "-o",
-		  "test.out",
-		  "--debug"
-		],
-		"group": {
-		  "kind": "build",
-		  "isDefault": true
+		{
+			"label": "Build with Clang",
+			"type": "shell",
+			"command": "clang++",
+			"args": [
+				"-std=c++17",
+				"-stdlib=libc++",
+				"test.cpp",
+				"-o",
+				"test.out",
+				"--debug"
+			],
+			"group": "build",
+			"problemMatcher": []
+		},
+		{
+			"type": "cppbuild",
+			"label": "C/C++: clang++ 建置使用中檔案",
+			"command": "/usr/bin/clang++",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"${file}",
+				"-std=c++17",
+				"-o",
+				"${fileDirname}/${fileBasenameNoExtension}"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "編譯器: /usr/bin/clang++"
 		}
-	  }
 	]
   }

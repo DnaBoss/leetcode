@@ -30,7 +30,9 @@ Example 3:
 Input: coins = [1], amount = 0
 Output: 0
 */
-#include <math.h>
+
+#include<vector>
+using namespace std;
 class Solution
 {
 public:
