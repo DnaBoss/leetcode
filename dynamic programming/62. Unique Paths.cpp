@@ -38,6 +38,26 @@ Submissions
 1,572,698
 */
 
+// class Solution
+// {
+// public:
+//     int uniquePaths(int m, int n)
+//     {
+//         int dp[m][n];
+//         for (int x = 0; x < m; x++)
+//             dp[x][0] = 1;
+//         for (int y = 0; y < n; y++)
+//             dp[0][y] = 1;
+//         for (int i = 1; i < m; i++)
+//         {
+//             for (int j = 1; j < n; j++)
+//             {
+//                 dp[i][j] = dp[i - 1][j] + dp[i][j - 1];
+//             }
+//         }
+//         return dp[m - 1][n - 1];
+//     }
+// };
 class Solution
 {
 public:
@@ -46,7 +66,7 @@ public:
         int dp[m][n];
         for (int x = 0; x < m; x++)
             dp[x][0] = 1;
-        for (int y = 0; y < n; y++)
+        for (int y = 0; y < m; y++)
             dp[0][y] = 1;
         for (int i = 1; i < m; i++)
         {
@@ -58,7 +78,6 @@ public:
         return dp[m - 1][n - 1];
     }
 };
-
 // Runtime: 0 ms, faster than 100.00% of C++ online submissions for Unique Paths.
 // Memory Usage: 5.8 MB, less than 91.08% of C++ online submissions for Unique Paths.
 

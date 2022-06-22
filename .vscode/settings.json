@@ -66,6 +66,8 @@
         "variant": "cpp",
         "__functional_base": "cpp",
         "algorithm": "cpp",
-        "functional": "cpp"
+        "functional": "cpp",
+        "random": "cpp",
+        "valarray": "cpp"
     }
 }
