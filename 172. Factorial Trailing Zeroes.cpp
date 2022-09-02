@@ -28,6 +28,7 @@ Constraints:
 Follow up: Could you write a solution that works in logarithmic time complexity?
 */
 #include<math.h> 
+main(){
 class Solution {
 public:
     int trailingZeroes(int n) {
@@ -42,6 +43,9 @@ public:
          return count;
     }
 };
+Solution s = new Solution()
+s->trailingZeroes(500000)
+}
 
 // Runtime: 0 ms, faster than 100.00% of C++ online submissions for Factorial Trailing Zeroes.
 // Memory Usage: 5.9 MB, less than 30.42% of C++ online submissions for Factorial Trailing Zeroes.
