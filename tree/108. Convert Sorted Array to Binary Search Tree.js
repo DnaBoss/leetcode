@@ -23,10 +23,10 @@ class TreeNode {
 //    -3   9
 //    /   /
 
-題意:將排序過的陣列，組成一個二分搜索樹
-思路: 中間那個數字其實就是 root，以root為中心，左邊的是左子樹、右邊的是右子樹
-左子樹那堆數字的中心，則是左子樹的root
-以此類推，指派完每一個節點
+// 題意:將排序過的陣列，組成一個二分搜索樹
+// 思路: 中間那個數字其實就是 root，以root為中心，左邊的是左子樹、右邊的是右子樹
+// 左子樹那堆數字的中心，則是左子樹的root
+// 以此類推，指派完每一個節點
 
 /**
  * @param {number[]} nums
@@ -57,10 +57,10 @@ function Convert(nums) {
     // }
     return node
 }
-不斷的切出新的arry 放進 convert
-效能超差
-於是改寫
-不切新的array
+// 不斷的切出新的arry 放進 convert
+// 效能超差
+// 於是改寫
+// 不切新的array
 /**
  * @param {number[]} nums
  * @return {TreeNode}
