@@ -71,3 +71,5 @@ public:
         return sum;
     }
 };
+
+// Runtime 17 ms Beats 18.22% Memory 13.9 MB Beats 44.9%

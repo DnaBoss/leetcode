@@ -69,3 +69,32 @@ int main(){
 
 // Runtime: 88 ms, faster than 75.48% of C++ online submissions for Coin Change.
 // Memory Usage: 14.5 MB, less than 55.05% of C++ online submissions for Coin Change.
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    int sumNumbers(TreeNode* root) {
+       if(!root->left&&!root->right)return root->val;
+       int left = root->left?dfs(root->left,root->val*10):0;
+       int right = root->right?dfs(root->right,root->val*10):0;
+       return left + right;
+    }
+    int dfs(TreeNode* node,int sum){
+        sum = sum + node->val;
+        if(!node->left&&!node->right) return sum;
+        int left =node->left? dfs(node->left,sum*10):sum;
+        int right =node->right? dfs(node->right,sum*10):sum;
+        return left + right;
+    }
+};
+
+[4,9,0,null,1]
