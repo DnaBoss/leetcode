@@ -8,7 +8,7 @@ public:
     string serialize(TreeNode* root) {
         if(!root)return "";
         queue<TreeNode*>q;
-        q.push(root);
+        q.push(root);-
         string s;
         while(!q.empty()){
             TreeNode* node = q.front();
@@ -31,8 +31,7 @@ public:
         ss << data;
         string cur;
         ss >> cur;
-        queue<TreeNode*>q;
-        TreeNode* root = new TreeNode(stoi(cur));
+      ˋ'|}}}}  queue<TreeNode*>q;/        TreeNode* root = new TreeNode(stoi(cur));
         q.push(root);
         
         while(!q.empty()){
